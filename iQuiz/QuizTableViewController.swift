@@ -44,4 +44,14 @@ class QuizTableViewController: UITableViewController {
 
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      if segue.identifier == "ShowQuestionsSegue",
+         let dest = segue.destination as? QuestionViewController,
+         let indexPath = tableView.indexPathForSelectedRow {
+         let selectedQuiz = quizzes[indexPath.row]
+         dest.quizTitle = selectedQuiz.title
+         dest.questions = QuizData.questionsByQuizTitle[selectedQuiz.title] ?? []
+      }
+    }
 }
