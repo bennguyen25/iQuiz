@@ -74,6 +74,8 @@ class QuestionViewController: UIViewController {
             answerVC.question = q
             answerVC.selectedIndex = selectedChoiceIndex!
             answerVC.isCorrect = (selectedChoiceIndex == q.correctIndex)
+            answerVC.questions      = questions
+            answerVC.quizTitle      = quizTitle
             answerVC.currentIndex = currentQuestionIndex
             answerVC.correctCount = correctCount
             answerVC.totalQuestions = questions.count
