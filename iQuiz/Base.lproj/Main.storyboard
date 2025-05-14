@@ -54,7 +54,7 @@
                         <centerItemGroups>
                             <barButtonItemGroup customizationDisposition="fixed" id="C9F-yM-Srv">
                                 <barButtonItems>
-                                    <barButtonItem title="Item" id="xzx-ui-OHB">
+                                    <barButtonItem title="Settings" id="xzx-ui-OHB">
                                         <connections>
                                             <segue destination="pjG-b3-57t" kind="presentation" identifier="ShowSettingsSegue" id="fC2-8D-4Os"/>
                                         </connections>
@@ -86,7 +86,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data Source URL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M79-Ss-FeU">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Data Source URL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M79-Ss-FeU">
                                                     <rect key="frame" x="36" y="11.333333333333336" width="135" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -114,9 +114,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gy-3D-gGh">
-                                                    <rect key="frame" x="141" y="4" width="112" height="35"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gy-3D-gGh">
+                                                    <rect key="frame" x="140.66666666666666" y="6" width="112" height="35"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" title="Check Now"/>
                                                     <connections>
@@ -124,6 +123,10 @@
                                                     </connections>
                                                 </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0gy-3D-gGh" firstAttribute="centerX" secondItem="cvJ-dZ-IUE" secondAttribute="centerX" id="KKy-dC-DbK"/>
+                                                <constraint firstItem="0gy-3D-gGh" firstAttribute="top" secondItem="cvJ-dZ-IUE" secondAttribute="top" constant="6" id="srt-72-x9b"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
