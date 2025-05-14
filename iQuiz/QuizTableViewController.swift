@@ -9,15 +9,23 @@ import UIKit
 
 class QuizTableViewController: UITableViewController {
 
-    let quizzes = [
-        Quiz(title: "Mathematics", description: "How good are you at math?", iconName: "math"),
-        Quiz(title: "Marvel Super Heroes", description: "Do you know your Marvel heroes?", iconName: "marvel"),
-        Quiz(title: "Science", description: "I hope you're good at science!", iconName: "science")
-    ]
+    var quizzes: [Quiz] {
+      return QuizData.quizzes
+    }
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        self.title = "iQuiz"
+      super.viewDidLoad()
+      title = "iQuiz"
+      NotificationCenter.default.addObserver(
+        self,
+        selector: #selector(quizzesUpdated),
+        name: .quizzesUpdated,
+        object: nil
+      )
+    }
+    
+    @objc private func quizzesUpdated() {
+      tableView.reloadData()
     }
     
     @IBAction func settingsTapped(_ sender: UIBarButtonItem) {
@@ -54,4 +62,8 @@ class QuizTableViewController: UITableViewController {
          dest.questions = QuizData.questionsByQuizTitle[selectedQuiz.title] ?? []
       }
     }
+}
+
+extension Notification.Name {
+  static let quizzesUpdated = Notification.Name("quizzesUpdated")
 }

@@ -8,7 +8,19 @@
 import Foundation
 
 struct QuizData {
-    static let questionsByQuizTitle: [String: [Question]] = [
+    static var quizzes: [Quiz] = [
+        Quiz(title: "Mathematics",
+             description: "How good are you at math?",
+             iconName: "math"),
+        Quiz(title: "Marvel Super Heroes",
+             description: "Do you know your Marvel heroes?",
+             iconName: "marvel"),
+        Quiz(title: "Science",
+             description: "I hope you're good at science!",
+             iconName: "science")
+      ]
+    
+    static var questionsByQuizTitle: [String: [Question]] = [
         "Mathematics": [
             Question(
                 text: "What is 2 + 2?",
