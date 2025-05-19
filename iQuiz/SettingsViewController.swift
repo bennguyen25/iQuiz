@@ -100,6 +100,8 @@ class SettingsViewController: UITableViewController {
               newQuestions[rq.title] = qs
             }
             QuizData.questionsByQuizTitle = newQuestions
+              
+            QuizData.saveToDisk()
 
             DispatchQueue.main.async {
               NotificationCenter.default.post(

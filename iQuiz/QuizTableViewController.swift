@@ -16,6 +16,7 @@ class QuizTableViewController: UITableViewController {
     override func viewDidLoad() {
       super.viewDidLoad()
       title = "iQuiz"
+      QuizData.loadFromDisk()
       NotificationCenter.default.addObserver(
         self,
         selector: #selector(quizzesUpdated),
